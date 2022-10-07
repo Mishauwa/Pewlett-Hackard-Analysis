@@ -38,7 +38,7 @@ Are there enough qualified, retirement-ready employees in the departments to men
 - There is a special high risk because there are only 275 Senior Engineers and 77 Technique Leaders eligible for the mentorship program. 
 - Out of 25916 Senior Engineers and 3603 Technique Leaders going in retirement this number is not sufficient enough to buffer the retirement wave with mentorship program. 
 
-Example query for count of mentors by title. 
+2 additional queries: e.g for the count of mentors by title. 
 
 SELECT COUNT(mt.title),
 		mt.title
@@ -46,4 +46,18 @@ FROM mentorship_eligibility as mt
 GROUP BY mt.title
 ORDER BY mt.count DESC;
 
+SELECT DISTINCT ON (employees.emp_no) employees.emp_no,
+    employees.first_name,
+    employees.last_name,
+    titles.title,
+    titles.from_date,
+    titles.to_date
+INTO all_employees
+FROM employees
+LEFT JOIN titles
+ON employees.emp_no = titles.emp_no
+ORDER BY employees.emp_no, titles.to_date DESC
+
+SELECT COUNT (emp_no)
+FROM all_employees
 
