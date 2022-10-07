@@ -6,9 +6,9 @@ The leadership of Pewlett Hackard wants to be prepared for the future and don't 
 
 This analysis consists of two technical analysis deliverables and a written report. 
 
-Deliverable 1: The Number of Retiring Employees by Title
-Deliverable 2: The Employees Eligible for the Mentorship Program
-Deliverable 3: A written report on the employee database analysis (README.md)
+- Deliverable 1: The Number of Retiring Employees by Title
+- Deliverable 2: The Employees Eligible for the Mentorship Program
+- Deliverable 3: A written report on the employee database analysis (README.md)
 
 
 ## Results
